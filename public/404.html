@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Redirecting...</title>
+
+    <script>
+    const l = window.location;
+    const GITHUB_ISSUES_LINK = "https://api.github.com/repos/SoftCreatR/softcreatr.github.io/issues";
+    const PATH_SEGMENTS_TO_SKIP = 0;
+    const isUrl = url => {
+      return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,24}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)+$/.test(url);
+    };
+
+    const fetchData = async issueNumber => {
+      const response = await fetch(`${GITHUB_ISSUES_LINK}/${issueNumber}`);
+
+      if (!response.ok) {
+        throw new Error(`An error has occured: ${response.status}`);
+      }
+
+      return await response.json();
+    }
+
+    (() => {
+      const homepage = `${l.protocol}//${l.hostname}${l.port ? ":" + l.port : ""}/${l.pathname.split("/")[PATH_SEGMENTS_TO_SKIP]}`;
+
+      fetchData(l.pathname.split("/")[PATH_SEGMENTS_TO_SKIP + 1])
+        .then(data => {
+          const message = data['message'];
+          const title = data['title'];
+          const url = document.createElement("a");
+
+          url.setAttribute("href", title);
+
+          const isInvalidUrl =
+            message === "Not Found" ||
+            !title ||
+            !isUrl(title) ||
+            url.hostname === l.hostname;
+
+          if (isInvalidUrl) {
+            l.replace(homepage);
+          } else {
+            l.replace(title);
+          }
+        })
+        .catch(() => l.replace(homepage));
+    })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>I'm sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+  </body>
+</html>
