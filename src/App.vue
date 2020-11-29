@@ -17,13 +17,13 @@ export default {
     return {
       socialProfiles: [
         {
-          name: 'twitter', url: 'https://twitter.com/1_2_dev', icon: 1
+          name: 'twitter', url: '/2', icon: 1 // https://github.com/SoftCreatR/softcreatr.github.io/issues/2
         }, {
-          name: 'github', url: 'https://github.com/SoftCreatR', icon: 2
+          name: 'github', url: '/3', icon: 2 // https://github.com/SoftCreatR/softcreatr.github.io/issues/3
         }, {
-          name: 'xing', url: 'https://www.xing.com/profile/Sascha_Greuel3', icon: 3
+          name: 'xing', url: '/4', icon: 3 // https://github.com/SoftCreatR/softcreatr.github.io/issues/4
         }, {
-          name: 'linkedin', url: 'https://www.linkedin.com/in/1-2-dev', icon: 4
+          name: 'linkedin', url: '/5', icon: 4 // https://github.com/SoftCreatR/softcreatr.github.io/issues/5
         }
       ]
     }
