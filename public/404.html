@@ -31,6 +31,7 @@
         .then(data => {
           const message = data['message'],
             title = data['title'],
+            userId = data['user']['id'],
             url = document.createElement('a');
 
           url.setAttribute('href', title);
@@ -38,6 +39,7 @@
           if (
             message === 'Not Found' ||
             !title ||
+            userId !== 81188 || // you know why...
             !/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,24}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)+$/i.test(title) ||
             url.hostname === l.hostname
           ) {
