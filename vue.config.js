@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "./",
   productionSourceMap: false,
   chainWebpack(config) {
     // Only convert .svg files that are imported by these files as Vue component
