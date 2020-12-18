@@ -1,17 +1,22 @@
 <template>
   <div>
-    <img alt="Sascha Greuel" src="../assets/me.jpg" width="300" height="300">
-    <h1>{{ msg }}</h1>
+    <img
+      alt="Sascha Greuel"
+      src="./../assets/me.jpg"
+      width="300"
+      height="300"
+    />
+    <h1 itemprop="name">{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutMe',
+  name: "AboutMe",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <style lang="scss">

@@ -7,23 +7,23 @@
 </template>
 
 <script>
-import AboutMe from './components/AboutMe.vue';
-import SocialBar from './components/SocialBar.vue';
-import Octocat from './components/Octocat.vue';
+import AboutMe from "./components/AboutMe.vue";
+import SocialBar from "./components/SocialBar.vue";
+import Octocat from "./components/Octocat.vue";
 
 export default {
-  name: 'Apps',
+  name: "Apps",
   data() {
     return {
       socialProfiles: [
         {
-          name: 'twitter', url: '/2', icon: 1 // https://github.com/SoftCreatR/softcreatr.github.io/issues/2
+          name: "twitter", url: "/2", icon: 1 // https://github.com/SoftCreatR/softcreatr.github.io/issues/2
         }, {
-          name: 'github', url: '/3', icon: 2 // https://github.com/SoftCreatR/softcreatr.github.io/issues/3
+          name: "github", url: "/3", icon: 2 // https://github.com/SoftCreatR/softcreatr.github.io/issues/3
         }, {
-          name: 'xing', url: '/4', icon: 3 // https://github.com/SoftCreatR/softcreatr.github.io/issues/4
+          name: "xing", url: "/4", icon: 3 // https://github.com/SoftCreatR/softcreatr.github.io/issues/4
         }, {
-          name: 'linkedin', url: '/5', icon: 4 // https://github.com/SoftCreatR/softcreatr.github.io/issues/5
+          name: "linkedin", url: "/5", icon: 4 // https://github.com/SoftCreatR/softcreatr.github.io/issues/5
         }
       ]
     }

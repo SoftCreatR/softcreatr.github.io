@@ -1,21 +1,25 @@
 <template>
-  <a href="https://github.com/SoftCreatR/softcreatr.github.io" class="github-corner" aria-label="View source on GitHub">
-    <OctocatIcon alt="View source on GitHub"/>
+  <a
+    href="https://github.com/SoftCreatR/softcreatr.github.io"
+    class="github-corner"
+    aria-label="View source on GitHub"
+  >
+    <OctocatIcon alt="View source on GitHub"></OctocatIcon>
   </a>
 </template>
 
 <script>
-import OctocatIcon from '../assets/octocat.svg';
+import OctocatIcon from "../assets/octocat.svg";
 
 export default {
-  name: 'Octocat',
+  name: "Octocat",
   components: {
-    OctocatIcon
+    OctocatIcon,
   },
   props: {
-    item: Object
+    item: Object,
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -56,15 +60,18 @@ export default {
 }
 
 @keyframes octocat-wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  
-  20%, 60% {
+
+  20%,
+  60% {
     transform: rotate(-25deg);
   }
-  
-  40%, 80% {
+
+  40%,
+  80% {
     transform: rotate(10deg);
   }
 }

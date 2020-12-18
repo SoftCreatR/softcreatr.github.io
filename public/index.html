@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Sascha Greuel - Software Engineer</title>
+
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="author" content="Sascha Greuel">
     <meta name="description" content="I'm Sascha Greuel, a 32 y/o father, husband, passionate software engineer & Overwatch addict from Germany."/>
+    <meta property="og:title" content="Sascha Greuel - Software Engineer"/>
+    <meta property="og:description" content="I'm Sascha Greuel, a 32 y/o father, husband, passionate software engineer & Overwatch addict from Germany."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="<%= BASE_URL %>img/social-card-1280x640.jpg"/>
+    <meta property="og:url" content="https://1-2.dev"/>
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="<%= BASE_URL %>img/social-card-1280x640.jpg"/>
+    <meta property="twitter:site" content="@1_2_dev"/>
 
-    <title>Sascha Greuel - Software Engineer</title>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Sascha Greuel",
+      "jobTitle": "Software Engineer",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Roßheidestr. 149",
+        "postalCode": "45968",
+        "addressLocality": "Gladbeck",
+        "addressRegion": "NRW",
+        "addressCountry": "Germany"
+      }
+    }
+    </script>
   </head>
   <body>
     <noscript>
-      <strong>I'm sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <span>I'm sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</span>
     </noscript>
 
     <div id="app"></div>

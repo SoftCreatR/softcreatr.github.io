@@ -7,31 +7,31 @@
 </template>
 
 <script>
-import SocialItem from './SocialItem.vue'
+import SocialItem from "./SocialItem.vue";
 
 export default {
-  name: 'SocialBar',
+  name: "SocialBar",
   components: {
-    SocialItem
+    SocialItem,
   },
   props: {
-    items: Array
-  }
-}
+    items: Array,
+  },
+};
 </script>
 
 <style lang="scss">
 ul#socialItems {
   padding-inline-start: 0;
-  
+
   li {
     display: inline;
-    
+
     &:not(:last-child) {
       margin-right: 15px;
     }
   }
-  
+
   span:hover {
     cursor: pointer;
   }
