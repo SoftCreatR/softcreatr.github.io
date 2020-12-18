@@ -20,8 +20,11 @@ export default {
 
 <style lang="scss">
 .github-corner {
-  &:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
+  &:hover {
+    .octocat_svg__octo-arm,
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
   }
 
   > svg {
@@ -36,12 +39,18 @@ export default {
 
 @media (max-width: 500px) {
   .github-corner {
+    .octocat_svg__octo-arm,
     .octo-arm {
       animation: octocat-wave 560ms ease-in-out;
     }
 
-    .github-corner .octo-arm:hover {
-      animation: none;
+    .github-corner {
+      .octocat_svg__octo-arm,
+      .octo-arm {
+        &:hover {
+          animation: none;
+        }
+      }
     }
   }
 }
