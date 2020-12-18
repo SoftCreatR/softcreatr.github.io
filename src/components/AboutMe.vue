@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 img {
   border-radius: 50%;
   height: 300px;

@@ -20,21 +20,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 ul#socialItems {
   padding-inline-start: 0;
-}
-
-ul#socialItems li {
-  display: inline;
-}
-
-ul#socialItems li:not(:last-child) {
-  margin-right: 15px;
-}
-
-ul#socialItems span:hover {
-  cursor: pointer;
+  
+  li {
+    display: inline;
+    
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  
+  span:hover {
+    cursor: pointer;
+  }
 }
 </style>
-

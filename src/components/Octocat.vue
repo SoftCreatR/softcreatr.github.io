@@ -18,27 +18,31 @@ export default {
 }
 </script>
 
-<style>
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
+<style lang="scss">
+.github-corner {
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 
-.github-corner > svg {
-  border: 0;
-  color: #fff;
-  fill: #151513;
-  position: absolute;
-  right: 0;
-  top: 0;
+  > svg {
+    border: 0;
+    color: #fff;
+    fill: #151513;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (max-width: 500px) {
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-  
-  .github-corner .octo-arm:hover {
-    animation: none;
+  .github-corner {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+
+    .github-corner .octo-arm:hover {
+      animation: none;
+    }
   }
 }
 

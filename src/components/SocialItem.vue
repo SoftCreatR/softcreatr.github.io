@@ -1,9 +1,9 @@
 <template>
     <span>
-        <TwitterIcon class="twitter" v-if="item.icon === 1" width="20px" height="20px" @click="handleClick(item.url)"/>
-        <GithubIcon class="github" v-if="item.icon === 2" width="20px" height="20px" @click="handleClick(item.url)"/>
-        <XingIcon class="xing" v-if="item.icon === 3" width="20px" height="20px" @click="handleClick(item.url)"/>
-        <LinkedinIcon class="linkedin" v-if="item.icon === 4" width="20px" height="20px" @click="handleClick(item.url)"/>
+        <TwitterIcon class="socialIcon twitter" v-if="item.icon === 1" width="20px" height="20px" @click="handleClick(item.url)"/>
+        <GithubIcon class="socialIcon github" v-if="item.icon === 2" width="20px" height="20px" @click="handleClick(item.url)"/>
+        <XingIcon class="socialIcon xing" v-if="item.icon === 3" width="20px" height="20px" @click="handleClick(item.url)"/>
+        <LinkedinIcon class="socialIcon linkedin" v-if="item.icon === 4" width="20px" height="20px" @click="handleClick(item.url)"/>
     </span>
 </template>
 
@@ -32,20 +32,25 @@ export default {
 }
 </script>
 
-<style>
-.twitter:hover {
-  fill: #1da1f2;
-}
+<style lang="scss">
+.socialIcon {
+  height: 20px;
+  width: 20px;
 
-.github:hover {
-  fill: #333;
-}
+  &.twitter:hover {
+    fill: #1da1f2;
+  }
 
-.xing:hover {
-  fill: #026466;
-}
+  &.github:hover {
+    fill: #333;
+  }
 
-.linkedin:hover {
-  fill: #0077b5;
+  &.xing:hover {
+    fill: #026466;
+  }
+
+  &.linkedin:hover {
+    fill: #0077b5;
+  }
 }
 </style>
