@@ -1,6 +1,6 @@
 <template>
   <ul id="socialItems">
-    <li v-for="(item, index) in items" :key="index">
+    <li v-for="(item, index) in items" :key="index" tabindex="0">
       <social-item v-bind:item="item"></social-item>
     </li>
   </ul>
@@ -30,10 +30,6 @@ ul#socialItems {
     &:not(:last-child) {
       margin-right: 15px;
     }
-  }
-
-  span:hover {
-    cursor: pointer;
   }
 }
 </style>

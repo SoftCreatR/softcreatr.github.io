@@ -23,6 +23,13 @@ export default {
 </script>
 
 <style lang="scss">
+.octocat_svg__octo-arm,
+.octocat_svg__octo-body,
+.octo-arm,
+octo-body {
+  fill: var(--background-color);
+}
+
 .github-corner {
   &:hover {
     .octocat_svg__octo-arm,
@@ -34,7 +41,7 @@ export default {
   > svg {
     border: 0;
     color: #fff;
-    fill: #151513;
+    fill: var(--text-color);
     position: absolute;
     right: 0;
     top: 0;
