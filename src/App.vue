@@ -36,6 +36,11 @@ export default {
           url: "/5",
           icon: 4, // https://github.com/SoftCreatR/softcreatr.github.io/issues/5
         },
+        {
+          name: "mail",
+          url: "mailto:hello@1-2.dev",
+          icon: 5,
+        },
       ],
     };
   },

@@ -39,6 +39,16 @@
         @click="handleClick(item.url)"
       />
     </span>
+
+    <span class="socialIcon" aria-label="Mail">
+      <MailIcon
+        class="mail"
+        v-if="item.icon === 5"
+        width="20px"
+        height="20px"
+        @click="handleClick(item.url)"
+      />
+    </span>
   </span>
 </template>
 
@@ -47,6 +57,7 @@ import TwitterIcon from "../assets/twitter-logo.svg";
 import GithubIcon from "../assets/github-logo.svg";
 import XingIcon from "../assets/xing-logo.svg";
 import LinkedinIcon from "../assets/linkedin-logo.svg";
+import MailIcon from "../assets/mailru-logo.svg";
 
 export default {
   name: "SocialItem",
@@ -55,6 +66,7 @@ export default {
     GithubIcon,
     XingIcon,
     LinkedinIcon,
+    MailIcon,
   },
   props: {
     item: Object,
@@ -132,6 +144,10 @@ export default {
 
   > .linkedin:hover {
     fill: #0077b5;
+  }
+
+  > .mail:hover {
+    fill: #209dd4;
   }
 }
 </style>
