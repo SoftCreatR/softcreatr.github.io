@@ -21,9 +21,9 @@
     };
 
     (() => {
-      const homepage = `${l.protocol}//${l.hostname}${l.port ? ':' + l.port : ''}/${l.pathname.split('/')[s]}`;
+      const homepage = `${l.protocol}//${l.hostname}${l.port ? ':' + l.port : ''}/${l.pathname.split('/')[0]}`;
 
-      fetchData(l.pathname.split('/')[s + 1])
+      fetchData(l.pathname.split('/')[1])
         .then(data => {
           const message = data['message'],
             title = data['title'],

@@ -2,9 +2,10 @@
   <div>
     <img
       alt="Sascha Greuel"
-      src="./../assets/me.jpg"
-      width="300"
-      height="300"
+      src="./../assets/me.webp"
+      srcset="./../assets/me.webp 1x, ./../assets/me@2x.webp 2x, ./../assets/me@3x.webp 3x"
+      width="294"
+      height="294"
     />
     <h1 itemprop="name">{{ msg }}</h1>
   </div>

@@ -34,7 +34,7 @@ module.exports = {
       msTileImage: "img/icons/msapplication-icon-150x150.png",
     },
     workboxOptions: {
-      exclude: ["CNAME"],
+      exclude: ["CNAME", ".htaccess"],
     },
   },
 };

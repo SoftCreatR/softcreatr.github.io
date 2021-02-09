@@ -1,0 +1,65 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ 404.html [L,QSA]
+</IfModule>
+
+<IfModule mod_headers.c>
+  <IfModule mod_env.c>
+    # Add security and privacy related headers
+    Header      unset X-Content-Type-Options
+    Header always set X-Content-Type-Options "nosniff"
+
+    Header      unset X-XSS-Protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    Header      unset X-Robots-Tag
+    Header always set X-Robots-Tag "none"
+
+    Header      unset X-Frame-Options
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    Header      unset X-Download-Options
+    Header always set X-Download-Options "noopen"
+
+    Header      unset X-Permitted-Cross-Domain-Policies
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+
+    Header      unset Strict-Transport-Security
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+    Header      unset Referrer-Policy
+    Header always set Referrer-Policy "no-referrer"
+
+    Header      unset Feature-Policy
+    Header always set Feature-Policy "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'"
+
+    Header      unset Content-Security-Policy
+    Header always set Content-Security-Policy "default-src 'none'; base-uri 'self'; img-src 'self' data:; script-src 'self' 'sha256-PnDzkTvtG+v8bfR3bRWcmui5d6D05dffQ1zDmcC6v08=' https://storage.googleapis.com; style-src 'self'; manifest-src 'self'; connect-src 'self' https://api.github.com; frame-ancestors 'none'; form-action 'none'"
+
+    SetEnv modHeadersAvailable true
+  </IfModule>
+
+  # Let browsers cache CSS, JS & JPEG files for half a year
+  <FilesMatch "\.(css|js|jpe?g)$">
+    Header      unset Cache-Control
+    Header always set Cache-Control "max-age=15778463"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/svg+xml svg svgz
+  AddEncoding gzip svgz
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+AddDefaultCharset utf-8
+Options -Indexes
+
+<IfModule pagespeed_module>
+  ModPagespeed Off
+</IfModule>
