@@ -36,7 +36,7 @@
     Header always set Feature-Policy "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'"
 
     Header      unset Content-Security-Policy
-    Header always set Content-Security-Policy "default-src 'none'; base-uri 'self'; img-src 'self' data:; script-src 'self' 'sha256-PnDzkTvtG+v8bfR3bRWcmui5d6D05dffQ1zDmcC6v08=' https://storage.googleapis.com; style-src 'self'; manifest-src 'self'; connect-src 'self' https://api.github.com; frame-ancestors 'none'; form-action 'none'"
+    Header always set Content-Security-Policy "default-src 'none'; base-uri 'self'; img-src 'self' data:; script-src 'self' 'sha256-+9ve5x5JtCdI99AO6Hm83AZe7EcsBI+YaZ8QbVIanaE=' https://storage.googleapis.com; style-src 'self'; manifest-src 'self'; connect-src 'self' https://api.github.com; frame-ancestors 'none'; form-action 'none'"
 
     SetEnv modHeadersAvailable true
   </IfModule>
